@@ -1,98 +1,12 @@
-#page-15853 .ma15 {
-    margin-top: 15px;
-  }
-  
-  #page-15853 .ma30 {
-    margin-top: 30px;
-  }
-  
-  #page-15853 .ma50 {
-    margin-top: 100px;
-  }
-  
-  #page-15853 .font-w-s {
-    font-weight: 300;
-  }
-  
-  #page-15853 .font-c-b {
-    color: #000000;
-  }
-  
-  
-  /* TESTING */
-  #page-15853 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 1rem;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    #page-15853 .grid {
-      grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
-    }
-  }
-  
-  #page-15853 .grid > div {
-    background: rgb(255, 255, 255);
-    padding: 1rem;
-    position: relative;
-    -webkit-box-shadow: 0 3px 10px #ddd;
-    box-shadow: 0 3px 10px #ddd;
-    border-radius: 5px;
-    height: 150px;
-  }
-  
-  #page-15853 .grid > div img {
-    position: absolute;
-    max-width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #page-15853 .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .0s ease;
-    background-color: #ffffff;
-    
-  }
-  
-  #page-15853 .overlay a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    transition: .0s ease;
-  }
-  
-  #page-15853 .grid > div:hover .overlay {
-    opacity: 1;
-    bottom: 0;
-    height: 100%;
-  }
-  
-  #page-15853 .text {
-    color: #000000;
-    font-size: 20px;
-    position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-  }
-  
-  #page-15853 .text-light {
-    font-size: 14px;
-    font-weight: 300;
-  }
+body {
+  background-color: green;
+}
+
+body div {
+  font-size: green;
+}
+
+body:hover {
+  background-color: green;
+}
+/*# sourceMappingURL=style.css.map */

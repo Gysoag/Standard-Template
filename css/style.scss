@@ -1,0 +1,12 @@
+body {
+    background-color: green;
+
+    div {
+        font-size: green;
+    }
+
+    &:hover {
+        background-color: green;
+    }
+}
+    

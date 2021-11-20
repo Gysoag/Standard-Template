@@ -1,6 +1,11 @@
 # Standard-Template
 Standard-Template
 
+#Plugins
+- git
+- Live Sass Compiler
+
+
 #Todo
 - Bildpfad stimmt noch nicht
 - Allgemein css anpassungen für Standard-Template
