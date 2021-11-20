@@ -2,7 +2,7 @@
 <?php include './includes/header.php'; ?>
 
 <!-- Code -->
-<div class="content page-staticcontent">  
+<div class="content page-staticcontent page-15853">  
     <section class="section-wrapper">
         <div class="section-inner">
 
