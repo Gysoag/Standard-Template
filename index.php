@@ -170,6 +170,7 @@
         </div>      
     </section>
 </div>
+<h1>Test</h1>
 
 <!-- Include Footer -->
 <?php include './includes/footer.php'; ?>
