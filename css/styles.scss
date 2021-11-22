@@ -1,0 +1,141 @@
+/*  Color Klassen definieren */
+$color-green: #009775;
+$color-black: #1D1D1D;
+$color-white: #FFFFFF;
+$color-blue: #62A1D8;
+$color-pink: #D8628E;
+$color-yellow: #FFF35C;
+
+/*  Margin Klassen definieren 
+    1rem = 10px
+*/
+#page-15853 {
+    .m-b-40 {
+        margin-bottom: 4rem;
+    }
+
+    .m-t-40 {
+        margin-top: 4rem;
+    }
+
+    .m-b-100 {
+        margin-bottom: 10rem;
+    }
+
+    .m-t-100 {
+        margin-top: 10rem;
+    }
+}
+
+/*  Padding Klassen definieren 
+    1rem = 10px
+*/
+#page-15853 {
+    
+    .p-b-15 {
+        padding-bottom: 1.5rem;
+    }
+
+    .p-b-30 {
+        padding-bottom: 3rem;
+    }
+
+    /*  Text Klassen definieren */
+    .font-w-s {
+        font-weight: 100;
+    }
+
+    .font-c-b {
+        color: $color-black;
+    }
+}
+
+
+
+/* Sidenav ausblenden + Page width auf 100% */
+#page-15853 {
+    .section-inner-aside {
+        display:none;
+    }
+
+    .section-inner-content {
+        width: 100%;
+    }
+}
+
+
+#page-15853 .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+  }
+
+
+@media only screen and (max-width: 600px) {
+    #page-15853 .grid {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    }
+}
+
+
+#page-15853 .grid > div {
+    background: $color-white;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 3px 10px #ddd;
+    -webkit-box-shadow: 0 3px 10px #ddd;
+    border-radius: 5px;
+    height: 150px;
+  }
+
+#page-15853 .grid > div img {
+    position: absolute;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#page-15853 .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .0s ease;
+    background-color: #ffffff;
+
+    a {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transition: .0s ease;
+    }
+
+    &:hover {
+        opacity: 1;
+        bottom: 0;
+        height: 100%;
+    }
+  }
+
+#page-15853 {
+    .text {
+        color: #000000;
+        font-size: 20px;
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    .text-light {
+        font-size: 14px;
+        font-weight: 300;
+    }
+  }

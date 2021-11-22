@@ -1,3 +1,8 @@
+      </div>
+    </div>      
+  </section>
+</div>
+
 <?php
 $today = date('d.m.Y');
 $now = date('H:i:s');

@@ -7,7 +7,7 @@
 
   <!-- CSS Einbinden -->
   <link rel="stylesheet" href="./css/opacc.style.css" /> <!-- Opacc -->
-  <link rel="stylesheet" href="./css/style.css" /> <!-- GYSO -->
+  <link rel="stylesheet" href="./css/styles.css" /> <!-- GYSO -->
 </head>
 <body>
 
@@ -536,3 +536,8 @@
   
     </div>
 </header>
+
+<div class="content page-staticcontent page-15853">  
+    <section class="section-wrapper">
+        <div class="section-inner">
+            <div id="page-15853">
