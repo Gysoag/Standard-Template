@@ -8,6 +8,9 @@
   <!-- CSS Einbinden -->
   <link rel="stylesheet" href="./css/opacc.style.css" /> <!-- Opacc -->
   <link rel="stylesheet" href="./css/styles.css" /> <!-- GYSO -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> <!-- Animate -->
+
 </head>
 <body>
 

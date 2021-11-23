@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*  Color Klassen definieren */
 /*  Margin Klassen definieren 
     1rem = 10px
@@ -125,5 +126,196 @@
 #page-15853 .text-light {
   font-size: 14px;
   font-weight: 300;
+}
+
+/* Verkaufsladen */
+.grid-container-verkaufsladen {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 450px 150px 350px;
+  gap: 16px;
+      grid-template-areas: "shopPanorama shopPanorama shopPanorama" "Öffnungszeiten Zahlungsarten Zahlungsarten" "shopImg Zahlungsarten Zahlungsarten";
+}
+
+@media only screen and (max-width: 1140px) {
+  .grid-container-verkaufsladen {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 450px 150px 350px;
+        grid-template-areas: "shopPanorama shopPanorama shopPanorama shopPanorama" "Öffnungszeiten Öffnungszeiten Zahlungsarten Zahlungsarten" "shopImg shopImg Zahlungsarten Zahlungsarten";
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .grid-container-verkaufsladen {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-auto-rows: 450px 150px auto;
+        grid-template-areas: "shopPanorama" "Öffnungszeiten" "Zahlungsarten";
+  }
+}
+
+.grid-container-verkaufsladen .item-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: shopPanorama;
+}
+
+.grid-container-verkaufsladen .item-1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.grid-container-verkaufsladen .item-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: Öffnungszeiten;
+  background: #FFFFFF;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 3px 10px #ddd;
+  -webkit-box-shadow: 0 3px 10px #ddd;
+}
+
+.grid-container-verkaufsladen .item-2 #Öffnungszeiten tbody tr {
+  border-bottom: none;
+}
+
+.grid-container-verkaufsladen .item-2 #Öffnungszeiten tbody td {
+  padding: 1rem 0 1rem 0;
+}
+
+.grid-container-verkaufsladen .item-3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: Zahlungsarten;
+  background: #FFFFFF;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 3px 10px #ddd;
+  -webkit-box-shadow: 0 3px 10px #ddd;
+}
+
+.grid-container-verkaufsladen .item-3 .zahlungsart-logos {
+  margin: 3rem 0 3rem 0;
+}
+
+.grid-container-verkaufsladen .item-3 img {
+  width: 150px;
+  margin: 0 0.8rem 0.8rem 0;
+}
+
+.grid-container-verkaufsladen .item-3 .besuch {
+  margin: 50px 0 0 0;
+}
+
+.grid-container-verkaufsladen .item-4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: shopImg;
+}
+
+.grid-container-verkaufsladen .item-4 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-t-10 {
+  padding-top: 1rem;
+}
+
+.p-b-10 {
+  padding-bottom: 1rem;
+}
+
+.kontakt-hr {
+  border: 1px solid #EEEEEE;
+  margin: 1rem 0 1rem 0;
+}
+
+h1 {
+  color: black;
+}
+
+/* Kontakt */
+.grid-container-kontakt {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 255px 255px;
+  gap: 16px;
+      grid-template-areas: "kontaktImg kontaktAdresse kontaktÖffnungszeiten" "kontaktImg kontaktMap kontaktÖffnungszeiten";
+}
+
+.grid-container-kontakt .item-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: kontaktImg;
+}
+
+.grid-container-kontakt .item-1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.grid-container-kontakt .item-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: kontaktAdresse;
+  background: #FFFFFF;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 3px 10px #ddd;
+  -webkit-box-shadow: 0 3px 10px #ddd;
+}
+
+.grid-container-kontakt .item-3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: kontaktMap;
+}
+
+.grid-container-kontakt .item-3 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.grid-container-kontakt .item-4 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: kontaktÖffnungszeiten;
+  background: #FFFFFF;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 3px 10px #ddd;
+  -webkit-box-shadow: 0 3px 10px #ddd;
+}
+
+.grid-container-kontakt .item-4 #Öffnungszeiten tbody tr {
+  border-bottom: none;
+}
+
+.grid-container-kontakt .item-4 #Öffnungszeiten tbody td {
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.grid-container-kontakt .item-4 #Öffnungszeiten tbody th {
+  padding: 0 0 0.5rem 0;
 }
 /*# sourceMappingURL=styles.css.map */
