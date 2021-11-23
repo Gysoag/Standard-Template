@@ -1,6 +1,14 @@
 @charset "UTF-8";
-/*  Color Klassen definieren */
-/* Sidenav ausblenden + Page width auf 100% */
+/*  Style SCSS
+    Author: Jeffrey Widmer
+    Company: GYSO AG
+    Date: 23.11.2021
+*/
+/******************************************* || COLOR STYLES       *******************************************/
+/* define colours classes */
+/******************************************* || Hide side navigation pages + section-inner-content 100%     *******************************************/
+/* Die Page ID muss hier hinzugefügt werden wenn die Seiten Navigation nicht angezeigt werden soll */
+/* Page Netzwerk */
 #page-15853 .section-inner-aside {
   display: none;
 }
@@ -9,198 +17,197 @@
   width: 100%;
 }
 
-/* Verkaufsladen */
-.grid-container-verkaufsladen {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 450px 150px 350px;
-  gap: 16px;
-      grid-template-areas: "shopPanorama shopPanorama shopPanorama" "Öffnungszeiten Zahlungsarten Zahlungsarten" "shopImg Zahlungsarten Zahlungsarten";
+/* Page Kontakt/Standorte */
+#page-12474 .section-inner-aside {
+  display: none;
 }
 
-@media only screen and (max-width: 1140px) {
-  .grid-container-verkaufsladen {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-rows: 450px 150px 350px;
-        grid-template-areas: "shopPanorama shopPanorama shopPanorama shopPanorama" "Öffnungszeiten Öffnungszeiten Zahlungsarten Zahlungsarten" "shopImg shopImg Zahlungsarten Zahlungsarten";
-  }
-}
-
-@media only screen and (max-width: 980px) {
-  .grid-container-verkaufsladen {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    grid-auto-rows: 450px 150px auto;
-        grid-template-areas: "shopPanorama" "Öffnungszeiten" "Zahlungsarten";
-  }
-}
-
-.grid-container-verkaufsladen .item-1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: shopPanorama;
-}
-
-.grid-container-verkaufsladen .item-1 img {
+#page-12474 .section-inner-content {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
-.grid-container-verkaufsladen .item-2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: Öffnungszeiten;
-  background: #FFFFFF;
-  padding: 1.5rem;
-  position: relative;
-  box-shadow: 0 3px 10px #ddd;
-  -webkit-box-shadow: 0 3px 10px #ddd;
+/* Page Verkaufsladen */
+#page-12468 .section-inner-aside {
+  display: none;
 }
 
-.grid-container-verkaufsladen .item-2 #Öffnungszeiten tbody tr {
-  border-bottom: none;
-}
-
-.grid-container-verkaufsladen .item-2 #Öffnungszeiten tbody td {
-  padding: 1rem 0 1rem 0;
-}
-
-.grid-container-verkaufsladen .item-3 {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: Zahlungsarten;
-  background: #FFFFFF;
-  padding: 1.5rem;
-  position: relative;
-  box-shadow: 0 3px 10px #ddd;
-  -webkit-box-shadow: 0 3px 10px #ddd;
-}
-
-.grid-container-verkaufsladen .item-3 .zahlungsart-logos {
-  margin: 3rem 0 3rem 0;
-}
-
-.grid-container-verkaufsladen .item-3 img {
-  width: 150px;
-  margin: 0 0.8rem 0.8rem 0;
-}
-
-.grid-container-verkaufsladen .item-3 .besuch {
-  margin: 50px 0 0 0;
-}
-
-.grid-container-verkaufsladen .item-4 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: shopImg;
-}
-
-.grid-container-verkaufsladen .item-4 img {
+#page-12468 .section-inner-content {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
+/******************************************* || TYPOGRAPHY      *******************************************/
+h1 {
+  color: black;
+}
+
+/******************************************* || MARGIN / PADDING / ABSTÄNDE     *******************************************/
+/* padding-top */
 .p-t-10 {
   padding-top: 1rem;
 }
 
+.p-t-15 {
+  padding-top: 1.5rem;
+}
+
+.p-t-30 {
+  padding-top: 3rem;
+}
+
+.p-t-50 {
+  padding-top: 5rem;
+}
+
+/* padding-bottom */
 .p-b-10 {
   padding-bottom: 1rem;
+}
+
+.p-b-15 {
+  padding-bottom: 1.5rem;
+}
+
+.p-b-30 {
+  padding-bottom: 3rem;
+}
+
+.p-b-50 {
+  padding-bottom: 5rem;
+}
+
+/* margin-top */
+.m-t-10 {
+  margin-top: 1rem;
+}
+
+.m-t-15 {
+  margin-top: 1.5rem;
 }
 
 .m-t-30 {
   margin-top: 3rem;
 }
 
-.kontakt-hr {
+.m-t-50 {
+  margin-top: 5rem;
+}
+
+/* margin-bottom */
+.m-b-10 {
+  margin-bottom: 1rem;
+}
+
+.m-b-15 {
+  margin-bottom: 1.5rem;
+}
+
+.m-b-30 {
+  margin-bottom: 3rem;
+}
+
+.m-b-50 {
+  margin-bottom: 5rem;
+}
+
+/******************************************* || ALLGEMEINE STYLES       *******************************************/
+.hr-gray {
   border: 1px solid #EEEEEE;
   margin: 1rem 0 1rem 0;
 }
 
-h1 {
-  color: black;
+.shadow-div {
+  background: #FFFFFF;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 3px 10px #ddd;
+  -webkit-box-shadow: 0 3px 10px #ddd;
 }
 
-/* Kontakt */
-.grid-container-kontakt {
+/******************************************* || VERKAUFSLADEN / Page-12468      *******************************************/
+/* Allgemeine Styles */
+.grid-container-shop img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Grid preset */
+.grid-container-shop {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 255px 255px;
+  grid-auto-rows: 450px 150px 350px;
   gap: 16px;
-      grid-template-areas: "kontaktImg kontaktAdresse kontaktÖffnungszeiten" "kontaktImg kontaktMap kontaktÖffnungszeiten";
+      grid-template-areas: "shopPanorama shopPanorama shopPanorama" "openingHours paymentMethods paymentMethods" "shopImage paymentMethods paymentMethods";
 }
 
-.grid-container-kontakt .item-1 {
+@media only screen and (max-width: 1140px) {
+  .grid-container-shop {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 450px 150px 350px;
+        grid-template-areas: "shopPanorama shopPanorama shopPanorama shopPanorama" "openingHours openingHours paymentMethods paymentMethods" "shopImage shopImage paymentMethods paymentMethods";
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .grid-container-shop {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-auto-rows: 450px 150px auto;
+        grid-template-areas: "shopPanorama" "openingHours" "paymentMethods";
+  }
+}
+
+.grid-container-shop .shopPanorama {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
-  grid-area: kontaktImg;
+  -ms-grid-column-span: 3;
+  grid-area: shopPanorama;
 }
 
-.grid-container-kontakt .item-1 img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.grid-container-kontakt .item-2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: kontaktAdresse;
-  background: #FFFFFF;
-  padding: 1.5rem;
-  position: relative;
-  box-shadow: 0 3px 10px #ddd;
-  -webkit-box-shadow: 0 3px 10px #ddd;
-}
-
-.grid-container-kontakt .item-3 {
+.grid-container-shop .openingHours {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: kontaktMap;
+  -ms-grid-column: 1;
+  grid-area: openingHours;
 }
 
-.grid-container-kontakt .item-3 img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.grid-container-kontakt .item-4 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
-  grid-area: kontaktÖffnungszeiten;
-  background: #FFFFFF;
-  padding: 1.5rem;
-  position: relative;
-  box-shadow: 0 3px 10px #ddd;
-  -webkit-box-shadow: 0 3px 10px #ddd;
-}
-
-.grid-container-kontakt .item-4 #Öffnungszeiten tbody tr {
+.grid-container-shop .openingHours .openingHours-table tbody tr {
   border-bottom: none;
 }
 
-.grid-container-kontakt .item-4 #Öffnungszeiten tbody td {
-  padding: 0.5rem 0 0.5rem 0;
+.grid-container-shop .openingHours .openingHours-table tbody td {
+  padding: 1rem 0 1rem 0;
 }
 
-.grid-container-kontakt .item-4 #Öffnungszeiten tbody th {
-  padding: 0 0 0.5rem 0;
+.grid-container-shop .paymentMethods {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: paymentMethods;
 }
+
+.grid-container-shop .paymentMethods .paymentMethods-logo {
+  margin: 3rem 0 3rem 0;
+}
+
+.grid-container-shop .paymentMethods img {
+  width: 15rem;
+  margin: 0 0.8rem 0.8rem 0;
+}
+
+.grid-container-shop .paymentMethods .visit {
+  margin: 5rem 0 0 0;
+}
+
+.grid-container-shop .shopImage {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: shopImage;
+}
+
+/******************************************* || NETZWERK / Page-15853 *******************************************/
 /*# sourceMappingURL=styles.css.map */

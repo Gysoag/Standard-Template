@@ -5,6 +5,8 @@ Standard-Template
 - git
 - Live Sass Compiler
 
+#Todo-CSS
+- CSS #ID anpassen und verkleinern, damit es für alle Pages gilt
 
 #Todo
 - Bildpfad stimmt noch nicht

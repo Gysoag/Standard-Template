@@ -1,12 +1,23 @@
-/*  Color Klassen definieren */
-$color-green: #009775;
-$color-black: #1D1D1D;
-$color-white: #FFFFFF;
-$color-blue: #62A1D8;
-$color-pink: #D8628E;
-$color-yellow: #FFF35C;
+/*  Style SCSS
+    Author: Jeffrey Widmer
+    Company: GYSO AG
+    Date: 23.11.2021
+*/
 
-/* Sidenav ausblenden + Page width auf 100% */
+/******************************************* || COLOR STYLES       *******************************************/
+/* define colours classes */
+$color-green: #009775;      // Standard grün
+$color-black: #1D1D1D;      // Standard schwarz
+$color-white: #FFFFFF;      // Standard weiss
+$color-blue: #62A1D8;       // Neuheiten
+$color-pink: #D8628E;       // Aktionen
+$color-yellow: #FFF35C;     // --
+$color-shadow: #DDDDDD;     // Schattenfarbe/background
+$color-gray: #EEEEEE;       // Standard grau
+
+/******************************************* || Hide side navigation pages + section-inner-content 100%     *******************************************/
+/* Die Page ID muss hier hinzugefügt werden wenn die Seiten Navigation nicht angezeigt werden soll */
+/* Page Netzwerk */
 #page-15853 {
     .section-inner-aside {
         display:none;
@@ -16,188 +27,184 @@ $color-yellow: #FFF35C;
         width: 100%;
     }
 }
+/* Page Kontakt/Standorte */
+#page-12474 {
+    .section-inner-aside {
+        display:none;
+    }
+
+    .section-inner-content {
+        width: 100%;
+    }
+}
+/* Page Verkaufsladen */
+#page-12468 {
+    .section-inner-aside {
+        display:none;
+    }
+
+    .section-inner-content {
+        width: 100%;
+    }
+}
+
+/******************************************* || TYPOGRAPHY      *******************************************/ 
+h1 {
+    color: black;
+}
+
+/******************************************* || MARGIN / PADDING / ABSTÄNDE     *******************************************/ 
+/* padding-top */
+.p-t-10 {
+    padding-top: 1rem;
+}
+.p-t-15 {
+    padding-top: 1.5rem;
+}
+.p-t-30 {
+    padding-top: 3rem;
+}
+.p-t-50 {
+    padding-top: 5rem;
+}
+/* padding-bottom */
+.p-b-10 {
+    padding-bottom: 1rem;
+}
+.p-b-15 {
+    padding-bottom: 1.5rem;
+}
+.p-b-30 {
+    padding-bottom: 3rem;
+}
+.p-b-50 {
+    padding-bottom: 5rem;
+}
+/* margin-top */
+.m-t-10 {
+    margin-top: 1rem;
+}
+.m-t-15 {
+    margin-top: 1.5rem;
+}
+.m-t-30 {
+    margin-top: 3rem;
+}
+.m-t-50 {
+    margin-top: 5rem;
+}
+/* margin-bottom */
+.m-b-10 {
+    margin-bottom: 1rem;
+}
+.m-b-15 {
+    margin-bottom: 1.5rem;
+}
+.m-b-30 {
+    margin-bottom: 3rem;
+}
+.m-b-50 {
+    margin-bottom: 5rem;
+}
+
+/******************************************* || ALLGEMEINE STYLES       *******************************************/ 
+.hr-gray {
+    border: 1px solid #EEEEEE;
+    margin: 1rem 0 1rem 0;
+}
+
+.shadow-div {
+    background: $color-white;
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: 0 3px 10px #ddd;
+    -webkit-box-shadow: 0 3px 10px #ddd;
+}
 
 
-/* Verkaufsladen */
-.grid-container-verkaufsladen {
+/******************************************* || VERKAUFSLADEN / Page-12468      *******************************************/
+/* Allgemeine Styles */
+.grid-container-shop {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+    }
+}
+
+/* Grid preset */
+.grid-container-shop {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 450px 150px 350px;
     gap: 16px;
     grid-template-areas: 
     "shopPanorama shopPanorama shopPanorama"
-    "Öffnungszeiten Zahlungsarten Zahlungsarten"
-    "shopImg Zahlungsarten Zahlungsarten";
+    "openingHours paymentMethods paymentMethods"
+    "shopImage paymentMethods paymentMethods";
 }
 
 @media only screen and (max-width: 1140px) {
-    .grid-container-verkaufsladen {
+    .grid-container-shop {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-auto-rows: 450px 150px 350px;
         grid-template-areas: 
         "shopPanorama shopPanorama shopPanorama shopPanorama"
-        "Öffnungszeiten Öffnungszeiten Zahlungsarten Zahlungsarten"
-        "shopImg shopImg Zahlungsarten Zahlungsarten";  
+        "openingHours openingHours paymentMethods paymentMethods"
+        "shopImage shopImage paymentMethods paymentMethods";  
     }
   }
 
-  @media only screen and (max-width: 980px) {
-    .grid-container-verkaufsladen {
-        grid-template-columns: 100%;
-        grid-auto-rows: 450px 150px auto;
-        grid-template-areas: 
-        "shopPanorama"
-        "Öffnungszeiten"
-        "Zahlungsarten";  
-    }
-  }
-
-.grid-container-verkaufsladen .item-1 {
-    grid-area: shopPanorama;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover
-    }
-    
-}
-
-.grid-container-verkaufsladen .item-2 {
-    grid-area: Öffnungszeiten;
-
-    background: $color-white;
-    padding: 1.5rem;
-    position: relative;
-    box-shadow: 0 3px 10px #ddd;
-    -webkit-box-shadow: 0 3px 10px #ddd;
-
-    #Öffnungszeiten tbody tr {
-        border-bottom: none;
-    }
-
-    #Öffnungszeiten tbody td {
-        padding: 1rem 0 1rem 0;
-    }
-
-}
-
-.grid-container-verkaufsladen .item-3 {
-    grid-area: Zahlungsarten;
-    
-    background: $color-white;
-    padding: 1.5rem;
-    position: relative;
-    box-shadow: 0 3px 10px #ddd;
-    -webkit-box-shadow: 0 3px 10px #ddd;
-
-    .zahlungsart-logos {
-        margin: 3rem 0 3rem 0;
-    }
-
-    img {
-        width: 150px;
-        margin: 0 0.8rem 0.8rem 0;
-    }
-
-    .besuch {
-        margin: 50px 0 0 0;
-    }
-    
-}
-
-.grid-container-verkaufsladen .item-4 {
-    grid-area: shopImg; 
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover
-    }
-}
-
-
-.p-t-10 {
-    padding-top: 1rem;
-}
-
-.p-b-10 {
-    padding-bottom: 1rem;
-}
-
-.m-t-30 {
-    margin-top: 3rem;
-}
-
-.kontakt-hr {
-    border: 1px solid #EEEEEE;
-    margin: 1rem 0 1rem 0;
-}
-
-h1 {
-    color: black;
-}
-
-
-/* Kontakt */
-.grid-container-kontakt {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 255px 255px;
-    gap: 16px;
+@media only screen and (max-width: 980px) {
+.grid-container-shop {
+    grid-template-columns: 100%;
+    grid-auto-rows: 450px 150px auto;
     grid-template-areas: 
-    "kontaktImg kontaktAdresse kontaktÖffnungszeiten"
-    "kontaktImg kontaktMap kontaktÖffnungszeiten";
+    "shopPanorama"
+    "openingHours"
+    "paymentMethods";  
+}
 }
 
-.grid-container-kontakt .item-1 {
-    grid-area: kontaktImg;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover
+.grid-container-shop {
+    .shopPanorama {
+        grid-area: shopPanorama;
     }
-}
 
-.grid-container-kontakt .item-2 {
-    grid-area: kontaktAdresse;
+    .openingHours {
+        grid-area: openingHours;
 
-    background: $color-white;
-    padding: 1.5rem;
-    position: relative;
-    box-shadow: 0 3px 10px #ddd;
-    -webkit-box-shadow: 0 3px 10px #ddd;
-}
-
-.grid-container-kontakt .item-3 {
-    grid-area: kontaktMap;
+        .openingHours-table tbody tr {
+            border-bottom: none;
+        }
     
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover
+        .openingHours-table tbody td {
+            padding: 1rem 0 1rem 0;
+        }
+    }
+
+    .paymentMethods {
+        grid-area: paymentMethods;
+
+        .paymentMethods-logo {
+            margin: 3rem 0 3rem 0;
+        }
+
+        img {
+            width: 15rem;
+            margin: 0 0.8rem 0.8rem 0;
+        }
+
+        .visit {
+            margin: 5rem 0 0 0;
+        }
+    }
+
+    .shopImage {
+        grid-area: shopImage;
     }
 }
 
-.grid-container-kontakt .item-4 {
-    grid-area: kontaktÖffnungszeiten;
 
-    background: $color-white;
-    padding: 1.5rem;
-    position: relative;
-    box-shadow: 0 3px 10px #ddd;
-    -webkit-box-shadow: 0 3px 10px #ddd;
 
-    #Öffnungszeiten tbody tr {
-        border-bottom: none;
-    }
-
-    #Öffnungszeiten tbody td {
-        padding: 0.5rem 0 0.5rem 0;
-    }
-
-    #Öffnungszeiten tbody th {
-        padding: 0 0 0.5rem 0;
-    }
-}
+/******************************************* || NETZWERK / Page-15853 *******************************************/ 
