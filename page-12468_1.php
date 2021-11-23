@@ -2,9 +2,19 @@
 <?php include './includes/header.php'; ?>
 
 
-<!-- Content -->
+<!-- Content Verkaufsladen-->
 <h1>Verkaufsladen | Beratung &amp; Abholung </h1>
-<div class="grid-container-verkaufsladen">
+<p>An unseren zwei Standorten <b>Kloten (ZH)</b> und <b>Crissier (VD)</b> begrüssen wir Sie gerne in unseren Shops.</p>
+<p>
+    Mit unseren GYSO-Shops bieten wir Ihnen einen praktischen Weg zum raschen Einkauf mit kompetenter Beratung.
+    Die Bedienung durch unsere Fachleute erfolgt ohne Voranmeldung oder Wartezeiten.
+</p>
+<p> 
+    Wir führen Qualitätsprodukte in den Kompetenzbereichen Kleben, Dichten, Schützen, Schleifen, Lackieren und Finish
+    für das Bau- und Automotivegewerbe.
+</p>
+
+<div class="grid-container-verkaufsladen m-t-30">
     <div class="item-1">
         <img src="kundenupload/content-management/img/referenz.png" alt="">
     </div>

@@ -2,7 +2,7 @@
 <?php include './includes/header.php'; ?>
 
 
-<!-- Content -->
+<!-- Content Kontakt-->
 <h1>Hauptsitz Kloten | GYSO AG</h1>
 <div class="grid-container-kontakt">
     <div class="item-1">

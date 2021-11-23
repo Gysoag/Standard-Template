@@ -1,7 +1,7 @@
 ﻿<!-- Include Header -->
 <?php include './includes/header.php'; ?>
 
-<!-- Code -->
+<!-- Content Netzwerk -->
 
                 <!-- Netzwerk / Handelspartner -->
                 <div class="m-t-40">
