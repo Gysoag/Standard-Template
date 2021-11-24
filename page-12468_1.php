@@ -1,7 +1,7 @@
-<!-- Include Header -->
+﻿<!-- Include Header -->
 <?php include './includes/header.php'; ?>
 
-
+<div id="page-12468">
 <!-- Content Verkaufsladen-->
 <h1>Verkaufsladen | Beratung &amp; Abholung </h1>
 <p>An unseren zwei Standorten <b>Kloten (ZH)</b> und <b>Crissier (VD)</b> begrüssen wir Sie gerne in unseren Shops.</p>
@@ -14,9 +14,9 @@
     für das Bau- und Automotivegewerbe.
 </p>
 
-<div class="grid-container-shop">
+<div class="grid-container-shop m-t-30">
     <div class="shopPanorama">
-        <img src="kundenupload/content-management/img/referenz.png" alt="">
+        <img src="kundenupload/content-management/img/verkaufsladen/Laden.jpg" alt="">
     </div>
     <div class="openingHours shadow-div">
         <h3>Unsere Öffnungszeiten</h3>
@@ -36,16 +36,20 @@
         <p class="p-t-10">Als registrierter Kunde können Sie die Waren (bei einem Warenwert ab CHF 30, exkl. MwSt.) bequem gegen Rechnung beziehen.</p>
         <p>Für Kleinbezüge, welche unter diesem Warenwert liegen, stehen folgende Zahlungsarten zur Verfügung:</p>
         <div class="paymentMethods-logo">
-            <img src="kundenupload/content-management/img/barzahlung.png" alt="" title="Barzahlung">
-            <img src="kundenupload/content-management/img/maestro.png" alt="" title="Maestro">
-            <img src="kundenupload/content-management/img/postfinance.png" alt="" title="Postfinance">
+            <img src="kundenupload/content-management/img/verkaufsladen/barzahlung.png" alt="" title="Barzahlung">
+            <img src="kundenupload/content-management/img/verkaufsladen/maestro.png" alt="" title="Maestro">
+            <img src="kundenupload/content-management/img/verkaufsladen/postfinance.png" alt="" title="Postfinance">
         </div>
         <p>Kleinmengenzuschlag: Bei Rechnungsstellung bis zu einem Warenwert von CHF 30 (exkl. MwSt.) erlauben wir uns für die Mehrkosten einen Kleinmengenzuschlag von CHF 20 zu belasten.</p>
         <p class="visit">Wir freuen uns auf ihren Besuch.</p>
     </div>
     <div class="shopImage">
-        <img src="kundenupload/content-management/img/referenz.png" alt="">
+        <img src="kundenupload/content-management/img/referenz.png" alt=""> 
+        <!-- <video autoplay muted loop>
+            <source src="kundenupload/content-management/img/DJI_0008.mp4" type="video/mp4">
+        </video> -->
     </div>   
+</div>
 </div>
 
 <!-- Include Footer -->

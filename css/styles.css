@@ -8,30 +8,15 @@
 /* define colours classes */
 /******************************************* || Hide side navigation pages + section-inner-content 100%     *******************************************/
 /* Die Page ID muss hier hinzugefügt werden wenn die Seiten Navigation nicht angezeigt werden soll */
-/* Page Netzwerk */
-#page-15853 .section-inner-aside {
+/*  Page 
+    Netzwerk * page-15853
+    Kontakt/Standorte * page-12474
+    Page Verkaufsladen * page-12468 */
+#page-15853 .section-inner-aside, #page-12474 .section-inner-aside, #page-12468 .section-inner-aside, #page-12471 .section-inner-aside {
   display: none;
 }
 
-#page-15853 .section-inner-content {
-  width: 100%;
-}
-
-/* Page Kontakt/Standorte */
-#page-12474 .section-inner-aside {
-  display: none;
-}
-
-#page-12474 .section-inner-content {
-  width: 100%;
-}
-
-/* Page Verkaufsladen */
-#page-12468 .section-inner-aside {
-  display: none;
-}
-
-#page-12468 .section-inner-content {
+#page-15853 .section-inner-content, #page-12474 .section-inner-content, #page-12468 .section-inner-content, #page-12471 .section-inner-content {
   width: 100%;
 }
 
@@ -41,81 +26,84 @@ h1 {
 }
 
 /******************************************* || MARGIN / PADDING / ABSTÄNDE     *******************************************/
-/* padding-top */
-.p-t-10 {
+#page-15853, #page-12474, #page-12468, #page-12471 {
+  /* padding-top */
+  /* padding-bottom */
+  /* margin-top */
+  /* margin-bottom */
+}
+
+#page-15853 .p-t-10, #page-12474 .p-t-10, #page-12468 .p-t-10, #page-12471 .p-t-10 {
   padding-top: 1rem;
 }
 
-.p-t-15 {
+#page-15853 .p-t-15, #page-12474 .p-t-15, #page-12468 .p-t-15, #page-12471 .p-t-15 {
   padding-top: 1.5rem;
 }
 
-.p-t-30 {
+#page-15853 .p-t-30, #page-12474 .p-t-30, #page-12468 .p-t-30, #page-12471 .p-t-30 {
   padding-top: 3rem;
 }
 
-.p-t-50 {
+#page-15853 .p-t-50, #page-12474 .p-t-50, #page-12468 .p-t-50, #page-12471 .p-t-50 {
   padding-top: 5rem;
 }
 
-/* padding-bottom */
-.p-b-10 {
+#page-15853 .p-b-10, #page-12474 .p-b-10, #page-12468 .p-b-10, #page-12471 .p-b-10 {
   padding-bottom: 1rem;
 }
 
-.p-b-15 {
+#page-15853 .p-b-15, #page-12474 .p-b-15, #page-12468 .p-b-15, #page-12471 .p-b-15 {
   padding-bottom: 1.5rem;
 }
 
-.p-b-30 {
+#page-15853 .p-b-30, #page-12474 .p-b-30, #page-12468 .p-b-30, #page-12471 .p-b-30 {
   padding-bottom: 3rem;
 }
 
-.p-b-50 {
+#page-15853 .p-b-50, #page-12474 .p-b-50, #page-12468 .p-b-50, #page-12471 .p-b-50 {
   padding-bottom: 5rem;
 }
 
-/* margin-top */
-.m-t-10 {
+#page-15853 .m-t-10, #page-12474 .m-t-10, #page-12468 .m-t-10, #page-12471 .m-t-10 {
   margin-top: 1rem;
 }
 
-.m-t-15 {
+#page-15853 .m-t-15, #page-12474 .m-t-15, #page-12468 .m-t-15, #page-12471 .m-t-15 {
   margin-top: 1.5rem;
 }
 
-.m-t-30 {
+#page-15853 .m-t-30, #page-12474 .m-t-30, #page-12468 .m-t-30, #page-12471 .m-t-30 {
   margin-top: 3rem;
 }
 
-.m-t-50 {
+#page-15853 .m-t-50, #page-12474 .m-t-50, #page-12468 .m-t-50, #page-12471 .m-t-50 {
   margin-top: 5rem;
 }
 
-/* margin-bottom */
-.m-b-10 {
+#page-15853 .m-b-10, #page-12474 .m-b-10, #page-12468 .m-b-10, #page-12471 .m-b-10 {
   margin-bottom: 1rem;
 }
 
-.m-b-15 {
+#page-15853 .m-b-15, #page-12474 .m-b-15, #page-12468 .m-b-15, #page-12471 .m-b-15 {
   margin-bottom: 1.5rem;
 }
 
-.m-b-30 {
+#page-15853 .m-b-30, #page-12474 .m-b-30, #page-12468 .m-b-30, #page-12471 .m-b-30 {
   margin-bottom: 3rem;
 }
 
-.m-b-50 {
+#page-15853 .m-b-50, #page-12474 .m-b-50, #page-12468 .m-b-50, #page-12471 .m-b-50 {
   margin-bottom: 5rem;
 }
 
 /******************************************* || ALLGEMEINE STYLES       *******************************************/
-.hr-gray {
+#page-15853 .hr-gray, #page-12474 .hr-gray, #page-12468 .hr-gray, #page-12471 .hr-gray {
   border: 1px solid #EEEEEE;
   margin: 1rem 0 1rem 0;
 }
 
-.shadow-div {
+#page-15853 .shadow-div, #page-12474 .shadow-div, #page-12468 .shadow-div, #page-12471 .shadow-div {
   background: #FFFFFF;
   padding: 1.5rem;
   position: relative;
@@ -125,15 +113,18 @@ h1 {
 
 /******************************************* || VERKAUFSLADEN / Page-12468      *******************************************/
 /* Allgemeine Styles */
-.grid-container-shop img {
+#page-12468 {
+  /* Grid preset */
+}
+
+#page-12468 .grid-container-shop img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-/* Grid preset */
-.grid-container-shop {
+#page-12468 .grid-container-shop {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -144,7 +135,7 @@ h1 {
 }
 
 @media only screen and (max-width: 1140px) {
-  .grid-container-shop {
+  #page-12468 .grid-container-shop {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: 450px 150px 350px;
@@ -153,7 +144,7 @@ h1 {
 }
 
 @media only screen and (max-width: 980px) {
-  .grid-container-shop {
+  #page-12468 .grid-container-shop {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     grid-auto-rows: 450px 150px auto;
@@ -161,28 +152,28 @@ h1 {
   }
 }
 
-.grid-container-shop .shopPanorama {
+#page-12468 .grid-container-shop .shopPanorama {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: shopPanorama;
 }
 
-.grid-container-shop .openingHours {
+#page-12468 .grid-container-shop .openingHours {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: openingHours;
 }
 
-.grid-container-shop .openingHours .openingHours-table tbody tr {
+#page-12468 .grid-container-shop .openingHours .openingHours-table tbody tr {
   border-bottom: none;
 }
 
-.grid-container-shop .openingHours .openingHours-table tbody td {
+#page-12468 .grid-container-shop .openingHours .openingHours-table tbody td {
   padding: 1rem 0 1rem 0;
 }
 
-.grid-container-shop .paymentMethods {
+#page-12468 .grid-container-shop .paymentMethods {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
@@ -190,24 +181,186 @@ h1 {
   grid-area: paymentMethods;
 }
 
-.grid-container-shop .paymentMethods .paymentMethods-logo {
+#page-12468 .grid-container-shop .paymentMethods .paymentMethods-logo {
   margin: 3rem 0 3rem 0;
 }
 
-.grid-container-shop .paymentMethods img {
+#page-12468 .grid-container-shop .paymentMethods img {
   width: 15rem;
   margin: 0 0.8rem 0.8rem 0;
 }
 
-.grid-container-shop .paymentMethods .visit {
+#page-12468 .grid-container-shop .paymentMethods .visit {
   margin: 5rem 0 0 0;
 }
 
-.grid-container-shop .shopImage {
+#page-12468 .grid-container-shop .shopImage {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: shopImage;
 }
 
-/******************************************* || NETZWERK / Page-15853 *******************************************/
+#page-12468 .grid-container-shop .shopImage video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/******************************************* || LIEFERSERVICE / Page-12471 *******************************************/
+/* Allgemeine Styles */
+#page-12471 {
+  /* Grid preset */
+}
+
+#page-12471 .grid-container-deliveryservice img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#page-12471 .grid-container-deliveryservice {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 450px 150px;
+  gap: 16px;
+      grid-template-areas: "deliveryServiceImage shippingInfo shippingInfo" "openingHours shippingInfo shippingInfo";
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: shippingInfo;
+  /* Accordion styles */
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo .row .col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo .row .col:last-child {
+  margin-left: 0;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo .tabs {
+  overflow: hidden;
+  /*box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);*/
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo .tab {
+  width: 100%;
+  color: #1D1D1D;
+  overflow: hidden;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo .tab-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+  background: #FFF;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 1px solid #cecece;
+  /* Icon */
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo .tab-label:hover {
+  background: #e6e6e6;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo .tab-label::after {
+  content: "\002B";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo .tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #1D1D1D;
+  background: white;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo .tab-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #FFF;
+  cursor: pointer;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo .tab-close:hover {
+  background: #e6e6e6;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo input:checked + .tab-label {
+  background: #e6e6e6;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo input:checked + .tab-label::after {
+  content: "\002D";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+#page-12471 .grid-container-deliveryservice .shippingInfo input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+#page-12471 .grid-container-deliveryservice .openingHours {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: openingHours;
+}
+
+#page-12471 .grid-container-deliveryservice .openingHours .openingHours-table tbody tr {
+  border-bottom: none;
+}
+
+#page-12471 .grid-container-deliveryservice .openingHours .openingHours-table tbody td {
+  padding: 1rem 0 1rem 0;
+}
+
+#page-12471 .grid-container-deliveryservice .deliveryServiceImage {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: deliveryServiceImage;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -14,31 +14,16 @@ $color-pink: #D8628E;       // Aktionen
 $color-yellow: #FFF35C;     // --
 $color-shadow: #DDDDDD;     // Schattenfarbe/background
 $color-gray: #EEEEEE;       // Standard grau
+$midnight: #FFF;
+$clouds: #ecf0f1;
 
 /******************************************* || Hide side navigation pages + section-inner-content 100%     *******************************************/
 /* Die Page ID muss hier hinzugefügt werden wenn die Seiten Navigation nicht angezeigt werden soll */
-/* Page Netzwerk */
-#page-15853 {
-    .section-inner-aside {
-        display:none;
-    }
-
-    .section-inner-content {
-        width: 100%;
-    }
-}
-/* Page Kontakt/Standorte */
-#page-12474 {
-    .section-inner-aside {
-        display:none;
-    }
-
-    .section-inner-content {
-        width: 100%;
-    }
-}
-/* Page Verkaufsladen */
-#page-12468 {
+/*  Page 
+    Netzwerk * page-15853
+    Kontakt/Standorte * page-12474
+    Page Verkaufsladen * page-12468 */
+#page-15853, #page-12474, #page-12468, #page-12471  {
     .section-inner-aside {
         display:none;
     }
@@ -54,6 +39,7 @@ h1 {
 }
 
 /******************************************* || MARGIN / PADDING / ABSTÄNDE     *******************************************/ 
+#page-15853, #page-12474, #page-12468, #page-12471  {
 /* padding-top */
 .p-t-10 {
     padding-top: 1rem;
@@ -107,7 +93,10 @@ h1 {
     margin-bottom: 5rem;
 }
 
+}
 /******************************************* || ALLGEMEINE STYLES       *******************************************/ 
+#page-15853, #page-12474, #page-12468, #page-12471  {
+
 .hr-gray {
     border: 1px solid #EEEEEE;
     margin: 1rem 0 1rem 0;
@@ -121,9 +110,13 @@ h1 {
     -webkit-box-shadow: 0 3px 10px #ddd;
 }
 
+}
+
 
 /******************************************* || VERKAUFSLADEN / Page-12468      *******************************************/
 /* Allgemeine Styles */
+
+#page-12468 {
 .grid-container-shop {
     img {
         width: 100%;
@@ -202,9 +195,149 @@ h1 {
 
     .shopImage {
         grid-area: shopImage;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+    }
+}
+}
+
+
+/******************************************* || LIEFERSERVICE / Page-12471 *******************************************/ 
+/* Allgemeine Styles */
+
+#page-12471 {
+.grid-container-deliveryservice {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+    }
+}
+
+/* Grid preset */
+.grid-container-deliveryservice {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 450px 150px;
+    gap: 16px;
+    grid-template-areas: 
+    "deliveryServiceImage shippingInfo shippingInfo"
+    "openingHours shippingInfo shippingInfo";
+}
+
+
+.grid-container-deliveryservice {
+
+    .shippingInfo {
+        grid-area: shippingInfo;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+          }
+
+        // Layout
+        .row {
+            display:flex;
+                .col {
+                flex:1;
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        /* Accordion styles */
+        .tabs { 
+        overflow: hidden;
+        /*box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);*/
+        }
+
+        .tab {
+            width: 100%;
+            color: #1D1D1D;
+            overflow: hidden;
+            &-label {
+              display: flex;
+              justify-content: space-between;
+              padding: 1em;
+              background: $midnight;
+              font-weight: bold;
+              cursor: pointer;
+              border-bottom: 1px solid rgb(206, 206, 206);
+              /* Icon */
+              &:hover {
+                background: darken($midnight, 10%);
+              }
+              &::after {
+                content: "\002B";
+                width: 1em;
+                height: 1em;
+                text-align: center;
+                transition: all .35s;
+              }
+            }
+            &-content {
+              max-height: 0;
+              padding: 0 1em;
+              color: #1D1D1D;
+              background: white;
+              transition: all .35s;
+            }
+            &-close {
+              display: flex;
+              justify-content: flex-end;
+              padding: 1em;
+              font-size: 0.75em;
+              background: $midnight;
+              cursor: pointer;
+              &:hover {
+                background: darken($midnight, 10%);
+              }
+            }
+          }
+
+          // :checked
+            input:checked {
+                + .tab-label {
+                background: darken($midnight, 10%);
+                &::after {
+                    content: "\002D";
+                    width: 1em;
+                    height: 1em;
+                    text-align: center;
+                    transition: all .35s;
+                }
+                }
+                ~ .tab-content {
+                max-height: 100vh;
+                padding: 1em;
+                }
+            }
+        
+    }
+
+    .openingHours {
+        grid-area: openingHours;
+
+        .openingHours-table tbody tr {
+            border-bottom: none;
+        }
+    
+        .openingHours-table tbody td {
+            padding: 1rem 0 1rem 0;
+        }
+    }
+
+    .deliveryServiceImage {
+        grid-area: deliveryServiceImage;
     }
 }
 
 
-
-/******************************************* || NETZWERK / Page-15853 *******************************************/ 
+}
