@@ -3,10 +3,14 @@
 <div id="page-12471">
 
 
-    <!-- Content Lieferserivce / HTML -->
-    <h1>Lieferserivce</h1>
-    
-    <div class="grid-container-deliveryservice m-t-30">
+<!-- Content Lieferserivce / HTML -->
+    <!-- Titel -->
+    <div>
+        <h1>Lieferserivce</h1>
+    </div>
+    <!-- Grid -->
+    <div class="grid-container-deliveryservice m-t-30 m-b-100">
+        <!-- Versandarten -->
         <div class="shippingInfo shadow-div">
             <h3>Unsere Versandarten</h3>
             <p class="p-t-10">Mit der sehr hohen Verfügbarkeit unserer Produkte sowie der modernen und effizienten Logistik, garantieren wir Ihnen die Auslieferung Ihrer Bestellung innert kürzester Zeit.</p>
@@ -48,6 +52,7 @@
             <p>Melden Sie Ihre individuellen Lieferwünsche bei unserem Verkauf Innendienst und wir setzen alles daran diese zu erfüllen.</p>
             </div>
         </div>
+        <!-- Öffnungszeiten -->
         <div class="openingHours shadow-div">
             <h3>Unsere Öffnungszeiten</h3>
             <table class="openingHours-table">
@@ -57,6 +62,7 @@
                 </tr>
             </table>
         </div>
+        <!-- Lieferservice Bild -->
         <div class="deliveryServiceImage">
             <img src="kundenupload/content-management/img/lieferservice/Lieferservice.png" alt="">
         </div>

@@ -5,6 +5,7 @@
 */
 
 /******************************************* || Accordion Funktion || START     *******************************************/
+
 const items = document.querySelectorAll(".accordion button");
 
 function toggleAccordion() {

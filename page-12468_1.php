@@ -53,7 +53,7 @@
         </div>
         <!-- Shop Eingangsbild -->
         <div class="shopImage">
-            <img src="kundenupload/content-management/img/referenz.png" alt=""> 
+            <img src="kundenupload/content-management/img/verkaufsladen/Eingang.jpg" alt=""> 
             <!-- <video autoplay muted loop>
                 <source src="kundenupload/content-management/img/DJI_0008.mp4" type="video/mp4">
             </video> -->
