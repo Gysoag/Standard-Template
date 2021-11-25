@@ -14,8 +14,12 @@ $color-pink: #D8628E;       // Aktionen
 $color-yellow: #FFF35C;     // --
 $color-shadow: #DDDDDD;     // Schattenfarbe/background
 $color-gray: #EEEEEE;       // Standard grau
-$midnight: #FFF;
-$clouds: #ecf0f1;
+
+$bg: #fff;
+$text: #7288a2;
+$gray: #4d5974;
+$lightgray: #e5e5e5;
+$blue: #03b5d2;
 
 /******************************************* || Hide side navigation pages + section-inner-content 100%     *******************************************/
 /* Die Page ID muss hier hinzugefügt werden wenn die Seiten Navigation nicht angezeigt werden soll */
@@ -166,6 +170,7 @@ h1 {
 
     .openingHours {
         grid-area: openingHours;
+        
 
         .openingHours-table tbody tr {
             border-bottom: none;
@@ -222,108 +227,134 @@ h1 {
 .grid-container-deliveryservice {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 450px 150px;
+    grid-auto-rows: 450px auto;
     gap: 16px;
     grid-template-areas: 
     "deliveryServiceImage shippingInfo shippingInfo"
     "openingHours shippingInfo shippingInfo";
 }
 
+@media only screen and (max-width: 1140px) {
+    .grid-container-deliveryservice {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 450px 150px 350px;
+        grid-template-areas: 
+        "deliveryServiceImage deliveryServiceImage shippingInfo shippingInfo"
+        "openingHours openingHours shippingInfo shippingInfo";  
+    }
+  }
+
+@media only screen and (max-width: 980px) {
+    .grid-container-deliveryservice {
+    grid-template-columns: 100%;
+    grid-auto-rows: 350px 150px auto;
+    grid-template-areas: 
+    "deliveryServiceImage"
+    "openingHours"
+    "shippingInfo";  
+}
+}
 
 .grid-container-deliveryservice {
 
     .shippingInfo {
         grid-area: shippingInfo;
-
-        input {
-            position: absolute;
-            opacity: 0;
-            z-index: -1;
-          }
-
-        // Layout
-        .row {
-            display:flex;
-                .col {
-                flex:1;
-                &:last-child {
-                    margin-left: 0;
-                }
-            }
-        }
-
-        /* Accordion styles */
-        .tabs { 
-        overflow: hidden;
-        /*box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);*/
-        }
-
-        .tab {
-            width: 100%;
-            color: #1D1D1D;
-            overflow: hidden;
-            &-label {
-              display: flex;
-              justify-content: space-between;
-              padding: 1em;
-              background: $midnight;
-              font-weight: bold;
-              cursor: pointer;
-              border-bottom: 1px solid rgb(206, 206, 206);
-              /* Icon */
-              &:hover {
-                background: darken($midnight, 10%);
-              }
-              &::after {
-                content: "\002B";
-                width: 1em;
-                height: 1em;
-                text-align: center;
-                transition: all .35s;
-              }
-            }
-            &-content {
-              max-height: 0;
-              padding: 0 1em;
-              color: #1D1D1D;
-              background: white;
-              transition: all .35s;
-            }
-            &-close {
-              display: flex;
-              justify-content: flex-end;
-              padding: 1em;
-              font-size: 0.75em;
-              background: $midnight;
-              cursor: pointer;
-              &:hover {
-                background: darken($midnight, 10%);
-              }
-            }
-          }
-
-          // :checked
-            input:checked {
-                + .tab-label {
-                background: darken($midnight, 10%);
-                &::after {
-                    content: "\002D";
-                    width: 1em;
-                    height: 1em;
-                    text-align: center;
-                    transition: all .35s;
-                }
-                }
-                ~ .tab-content {
-                max-height: 100vh;
-                padding: 1em;
-                }
-            }
         
+          .accordion {
+            .accordion-item {
+              border-bottom: 1px solid $lightgray;
+              button[aria-expanded='true'] {
+                border-bottom: 0px solid $color-green;
+              }
+            }
+            button {
+              position: relative;
+              display: block;
+              text-align: left;
+              width: 100%;
+              padding: 1em 0;
+              color: $color-black;
+              font-size: 1.6rem;
+              font-weight: 600;
+              font-family: 'Open Sans';
+              border: none;
+              background: none;
+              outline: none;
+              &:hover, &:focus {
+                cursor: pointer;
+                color: $color-green;
+                &::after {
+                  cursor: pointer;
+                  color: $color-green;
+                  border: 1px solid $color-green;
+                }
+              }
+              .accordion-title {
+                padding: 1em 1.5em 1em 0;
+              }
+              .icon {
+                display: inline-block;
+                position: absolute;
+                top: 18px;
+                right: 0;
+                width: 22px;
+                height: 22px;
+                &::before {
+                  display: block;
+                  position: absolute;
+                  content: '';
+                  top: 9px;
+                  left: 5px;
+                  width: 10px;
+                  height: 2px;
+                  background: currentColor;
+                }
+                &::after {
+                  display: block;
+                  position: absolute;
+                  content: '';
+                  top: 5px;
+                  left: 9px;
+                  width: 2px;
+                  height: 10px;
+                  background: currentColor;
+                }
+              }
+            }
+            button[aria-expanded='true'] {
+                color: $color-green;
+                .icon {
+                  &::after {
+                    width: 0;
+                  }
+                }
+                + .accordion-content {
+                  opacity: 1;
+                  max-height: 9em;
+                  transition: all 200ms linear;
+                  will-change: opacity, max-height;
+                }
+              }
+              .accordion-content {
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: opacity 0ms linear, max-height 0ms linear;
+                will-change: opacity, max-height;
+                p {
+                  margin: 0 0 1.5rem 0;
+                }
+              }
+            }
+
+            li {
+                padding-bottom: .5rem;
+            }
     }
 
     .openingHours {
         grid-area: openingHours;
+        max-height: 10.5rem;
 
         .openingHours-table tbody tr {
             border-bottom: none;
