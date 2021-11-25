@@ -12,6 +12,6 @@ $now = date('H:i:s');
     <p>Seite abgerufen am <?= $today ?> um <?= $now ?> Uhr.</p>
   </footer>
 
-  <script src="./js/gyso.js"></script>
+  <script src="./js/javascript.js"></script>
 </body>
 </html>
