@@ -19,7 +19,7 @@ function toggleAccordion() {
     this.setAttribute('aria-expanded', 'true');
   }
 
-  // Abfrage damit man mehrere öffnen kann
+  // Mehrere Tabs öffnen
   if (itemToggle == 'true') {
     this.setAttribute('aria-expanded', 'false');
   }
